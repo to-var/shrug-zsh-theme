@@ -1,5 +1,5 @@
 ![](https://raw.github.com/tmjoseantonio/jose-zsh-theme/master/img/shrug.png)
-# Jose's ZSH Theme
+# Shrug ZSH Theme
 A simple theme for *oh-my-zsh*
 
 ## Installation

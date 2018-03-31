@@ -1,7 +1,8 @@
 RED="\033[0;31m"
 GREEN="\033[0;32m"
 
-local host_name="¯\_(ツ%)_/¯"
+local host_name="
+¯\_(ツ%)_/¯"
 local path_string="%{$fg[cyan]%}%~%{$reset_color%}"
 local prompt_string="$"
 local return_status="%(?:%{$fg_bold[green]%}$prompt_string:%{$fg[red]%}$prompt_string)"
