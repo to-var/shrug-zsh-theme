@@ -22,7 +22,7 @@ ZSH_THEME="shrug"
 ```
 
 ## Preview
-![](https://raw.github.com/tmjoseantonio/jose-zsh-theme/master/img/shrug-preview.png)
+![](https://raw.github.com/tmjoseantonio/jose-zsh-theme/master/img/preview.gif)
 
 ## About the author:
 [Jose Tovar](http://tmjoseantonio.com)
