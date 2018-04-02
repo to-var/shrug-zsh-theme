@@ -21,18 +21,8 @@ You can also manually install it by moving the `shrug.zsh-theme` file to `~/.oh-
 ZSH_THEME="shrug"
 ```
 
-Work inspired by: [oh-my-zsh-beer-theme](https://github.com/tcnksm/oh-my-zsh-beer-theme)
-
-
-## Screenshots
-Default view, no git folder.
-![](https://raw.github.com/tmjoseantonio/jose-zsh-theme/master/img/no-git-folder.png)
-
-Git folder view, no changes on branch.
-![](https://raw.github.com/tmjoseantonio/jose-zsh-theme/master/img/git-no-changes.png)
-
-Git folder view, has changes on branch.
-![](https://raw.github.com/tmjoseantonio/jose-zsh-theme/master/img/git-has-changes.png)
+## Preview
+![](https://raw.github.com/tmjoseantonio/jose-zsh-theme/master/img/shrug-preview.png)
 
 ## About the author:
 [Jose Tovar](http://tmjoseantonio.com)
