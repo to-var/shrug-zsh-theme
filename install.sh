@@ -31,7 +31,11 @@ printResult() {
     fi
 }
 
-echo "\n------------------------------------------"
+# Welcome message
+echo $GREEN
+cat shrug
+echo $NC
+
 echo "Installing ${THEME_NAME}'s theme:"
 if cp ${THEME_NAME}.zsh-theme ~/.oh-my-zsh/themes/; then
     printResult true "$STEP_1"
