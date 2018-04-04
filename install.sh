@@ -14,7 +14,6 @@ STEP_3="Replacing theme..."
 
 # Config
 ZSH_THEME_OPTION="ZSH_THEME"
-THEME_NAME="shrug"
 
 # Other
 SUCCESS_COUNT=0
@@ -31,37 +30,46 @@ printResult() {
     fi
 }
 
-# Welcome message
-echo $GREEN
-cat shrug
-echo $NC
+installTheme() {
+    THEME_NAME=$1
+    # Welcome message
+    echo $GREEN
+    cat shrug
+    echo $NC
 
-echo "Installing ${THEME_NAME}'s theme:"
-if cp ${THEME_NAME}.zsh-theme ~/.oh-my-zsh/themes/; then
-    printResult true "$STEP_1"
-else
-    printResult false "$STEP_1"
-fi
-
-if [ $THEME_CONFIG_LINE -gt 0 ]; then
-    printResult true "$STEP_2"
-    if sed -E -i .bak "s/${ZSH_THEME_OPTION}=\"(.*)\"/${ZSH_THEME_OPTION}=\"${THEME_NAME}\"/" ~/.zshrc; then
-        printResult true "$STEP_3"
+    echo "Installing ${THEME_NAME} theme:"
+    if cp ${THEME_NAME}.zsh-theme ~/.oh-my-zsh/themes/; then
+        printResult true "$STEP_1"
     else
-        printResult false "$STEP_3"
+        printResult false "$STEP_1"
     fi
-else
-    printResult false "$STEP_2"
-fi
 
-if [ $SUCCESS_COUNT == $SUCCESS_EXPECTED ]; then
-    echo "\nTheme ${THEME_NAME} has benn successfully installed!"
-    echo "it should be available when you open a new"
-    echo "terminal window"
-else
-    echo "\nIt looks like there was an error"
-    echo "please feel free to post an issue on:"
-    echo "https://github.com/tmjoseantonio/shrug-zsh-theme/issues/new"
-fi
+    if [ $THEME_CONFIG_LINE -gt 0 ]; then
+        printResult true "$STEP_2"
+        if sed -E -i .bak "s/${ZSH_THEME_OPTION}=\"(.*)\"/${ZSH_THEME_OPTION}=\"${THEME_NAME}\"/" ~/.zshrc; then
+            printResult true "$STEP_3"
+        else
+            printResult false "$STEP_3"
+        fi
+    else
+        printResult false "$STEP_2"
+    fi
 
-echo "------------------------------------------"
+    if [ $SUCCESS_COUNT == $SUCCESS_EXPECTED ]; then
+        echo "\nTheme ${THEME_NAME} has benn successfully installed!"
+        echo "it should be available when you open a new"
+        echo "terminal window"
+    else
+        echo "\nIt looks like there was an error"
+        echo "please feel free to post an issue on:"
+        echo "https://github.com/tmjoseantonio/shrug-zsh-theme/issues/new"
+    fi
+
+    echo "------------------------------------------"
+}
+
+if [ $# -eq 0 ]; then
+    printResult false "No arguments supplied"
+else
+    installTheme $1
+fi

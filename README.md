@@ -9,7 +9,7 @@ Easy install (tested on macOS only)
 $ cd path/to/folder
 ```
 ```
-$ sh install.sh
+$ sh install.sh shrug
 ```
 
 You can also manually install it by moving the `shrug.zsh-theme` file to `~/.oh-my-zsh/themes/`, and then set the value of the `ZSH_THEME` value to `shrug` in the `~/.zshrc` file here.
