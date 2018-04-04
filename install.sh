@@ -2,6 +2,7 @@
 
 # Colors
 RED="\033[0;31m"
+ORANGE="\033[0;33m"
 GREEN="\033[0;32m"
 NC="\033[0m"
 
@@ -69,7 +70,8 @@ installTheme() {
 }
 
 if [ $# -eq 0 ]; then
-    printResult false "No arguments supplied"
+    printResult false "No arguments supplied, try the following"
+    echo "\$ ${ORANGE}sh install.sh [theme name]${NC}"
 else
     installTheme $1
 fi
