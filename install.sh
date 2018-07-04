@@ -57,7 +57,7 @@ installTheme() {
     fi
 
     if [ $SUCCESS_COUNT == $SUCCESS_EXPECTED ]; then
-        echo "\nTheme ${THEME_NAME} has benn successfully installed!"
+        echo "\nTheme ${THEME_NAME} has been successfully installed!"
         echo "it should be available when you open a new"
         echo "terminal window"
     else
