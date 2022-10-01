@@ -63,7 +63,7 @@ installTheme() {
     else
         echo "\nIt looks like there was an error"
         echo "please feel free to post an issue on:"
-        echo "https://github.com/tmjoseantonio/shrug-zsh-theme/issues/new"
+        echo "https://github.com/to-var/shrug-zsh-theme/issues/new"
     fi
 
     echo "------------------------------------------"
