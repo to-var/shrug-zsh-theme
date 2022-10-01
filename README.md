@@ -4,7 +4,7 @@ A simple theme for *oh-my-zsh*
 
 ## Installation
 
-Easy install (tested on macOS only)
+Easy install (MacOS only)
 ```
 $ cd path/to/folder
 ```
@@ -12,7 +12,10 @@ $ cd path/to/folder
 $ sh install.sh shrug
 ```
 
-You can also manually install it by copying the `shrug.zsh-theme` file to `~/.oh-my-zsh/themes/`, and then set the value of the `ZSH_THEME` value to `shrug` in the `~/.zshrc` file here.
+You can also manually install it by copying the `shrug.zsh-theme` file to `~/.oh-my-zsh/themes/`, and then set the value of the `ZSH_THEME` value to `shrug` in `~/.zshrc`.
+
+$ cp shrug.zsh-theme ~/.oh-my-zsh/themes/
+$ vim ~/.zshrc
 
 ```
 # Set name of the theme to load. Optionally, if you set this to "random"
