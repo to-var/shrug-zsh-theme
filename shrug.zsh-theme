@@ -10,14 +10,14 @@ local return_status="%(?:%{$fg_bold[green]%}$prompt_string:%{$fg[red]%}$prompt_s
 
 PROMPT='${host_name} ${return_status} %{$reset_color%} $(git_remote_status)'
 RPROMPT='%U$path_string%u $(git_custom_prompt) '
-ZSH_THEME_GIT_PROMPT_DIRTY=' ಠ_ಠ '
-ZSH_THEME_GIT_PROMPT_CLEAN=' (☞ﾟヮﾟ)☞ '
-ZSH_THEME_GIT_PROMPT_PREFIX="["
-ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[green]%} ᕕ(ಠ_ಠ) ᕗ "
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%} ミ ᕕ(ᐛ) ᕗ "
+ZSH_THEME_GIT_PROMPT_PREFIX=""
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
 git_custom_prompt() {
   local branch=$(current_branch)
   if [ -n "$branch" ]; then
-    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$branch$ZSH_THEME_GIT_PROMPT_SUFFIX $(parse_git_dirty)"
+    echo "@ $ZSH_THEME_GIT_PROMPT_PREFIX$branch $(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
 }
